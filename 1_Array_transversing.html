@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="number" id="numb">
+        <button onclick="getElement()">GetElement</button>
+    </form>
+
+
+    <script>
+
+        let data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        for (var i = 0; i < data.length; i++) {
+            document.write(`Array ${i} is ${data[i]} <br> ` + " ");
+        }
+        // let x= 3;
+
+        // document.write(data[3])
+
+        function getElement() {
+            let el = document.getElementById("numb").value;
+
+            if (el < data.length && typeof parseInt(el) === "number"  ) {
+
+                alert(data[el])
+            }
+      
+            else {
+                alert("please fill valid input")
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
